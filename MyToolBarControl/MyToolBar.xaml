@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="MyToolBarControl.MyToolBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyToolBarControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="352.166">
+    <DockPanel>
+        <TextBlock x:Name="ISender"  Height="25" DockPanel.Dock="Left" TextWrapping="Wrap" Margin="5,0,0,0" Padding="0" 
+                   VerticalAlignment="Center">
+            <Run>Выбрать отправителя:</Run>
+            <TextBlock.RenderTransform>
+                <TranslateTransform Y="4" />
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="btnDeleteSender" 
+                DockPanel.Dock="Right"
+                Height="25" Width="25" 
+                ToolTip="Удалить"
+                Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+                BorderThickness="0" BorderBrush="{x:Static SystemColors.ControlBrush}">
+            <Image Source="Images/Close-icon.png" />
+        </Button>
+        <Button x:Name="btnEditSender" 
+                DockPanel.Dock="Right"
+                Height="25" Width="25" 
+                ToolTip="Редактировать"
+                Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+                BorderThickness="0" BorderBrush="{x:Static SystemColors.ControlBrush}">
+            <Image Source="Images/Pencil-2-icon.png" />
+        </Button>
+        <Button x:Name="btnAddSender" 
+                DockPanel.Dock="Right"
+                Height="25" Width="25" 
+                ToolTip="Добавить"
+                Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+                BorderThickness="0" BorderBrush="{x:Static SystemColors.ControlBrush}">
+            <Image Source="Images/Add-icon.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+        </Button>
+        <ComboBox x:Name="cbSenderSelect" 
+                  Height="{Binding ElementName=ISender, Path=Height}"
+                  HorizontalAlignment="Stretch"
+                  SelectedIndex="1"
+                  ToolTip="Выбрать email отправителя"
+                  DockPanel.Dock="Left"
+                  Margin="5,0,0,0">
+            <ComboBoxItem>test@ksergey.ru</ComboBoxItem>
+            <ComboBoxItem>test@ksergey.ru</ComboBoxItem>
+        </ComboBox>
+    </DockPanel>
+</UserControl>
