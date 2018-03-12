@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:MailSender"
         xmlns:ctrl="clr-namespace:TabSwitcher;assembly=TabSwitcher"
         xmlns:ctrl2="clr-namespace:MyToolBarControl;assembly=MyToolBarControl"
+        xmlns:ctrl3="clr-namespace:ListViewItemSchedulerControl;assembly=ListViewItemSchedulerControl"
         xmlns:wpftool="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="MainWindow" Height="452.5" Width="800" Icon="Images/Letter-pen-icon.png">
@@ -25,7 +26,7 @@
             <TabItem Header="Формирование группы рассылки">
                 <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <ToolBarOverflowPanel Width="Auto" Height="Auto" Margin="0, 5" DockPanel.Dock="Top" HorizontalAlignment="Left">
-                    <!-- Выбрать отправителя =============================================================================== -->
+                        <!-- Выбрать отправителя =============================================================================== -->
                         <ToolBar Height="30" Width="502"
                                  x:Name="tbSender">
                             <ctrl2:MyToolBar x:Name="m_mtbSenderToolBar" VerticalAlignment="Center" Width="477" Text="Выбрать отправителя:"/>
@@ -84,7 +85,12 @@
                                 </StackPanel>
                             </Button>
                             <ListView Width="{Binding ElementName=cldScheduleDateTimes, Path=Width}" MinHeight="60">
-                                
+
+                                <ctrl3:ListViewItemSchedule />
+                                <ctrl3:ListViewItemSchedule />
+                                <ctrl3:ListViewItemSchedule />
+                                <ctrl3:ListViewItemSchedule />
+                                <ctrl3:ListViewItemSchedule />
                             </ListView>
                             <!--<wpftool:TimePicker x:Name="tbTimePicker" Width="{Binding ElementName=cldScheduleDateTimes, Path=Width}"/>-->
                             <!--<TextBox x:Name="tbTimePicker" Width="{Binding ElementName=cldScheduleDateTimes, Path=Width}"/>-->
@@ -104,7 +110,7 @@
                     </GroupBox>
                 </DockPanel>
             </TabItem>
-            
+
             <TabItem Header="Редактор писем" >
                 <DockPanel>
                     <ToolBarOverflowPanel DockPanel.Dock="Top" HorizontalAlignment="Left">
@@ -115,7 +121,7 @@
                     <RichTextBox x:Name="rtbLetter" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                 </DockPanel>
             </TabItem>
-            
+
             <!-- Статистика -->
             <TabItem Header="Статистика" >
                 <DockPanel>
@@ -125,7 +131,7 @@
                         </ToolBar>
                     </ToolBarOverflowPanel>
                     <StackPanel>
-                        
+
                     </StackPanel>
                 </DockPanel>
             </TabItem>
