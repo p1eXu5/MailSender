@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailSender"
         xmlns:ctrl="clr-namespace:TabSwitcher;assembly=TabSwitcher"
-        xmlns:ctrl2="clr-namespace:MyToolBarControl;assembly=WpfControlLibrary1"
+        xmlns:ctrl2="clr-namespace:MyToolBarControl;assembly=MyToolBarControl"
         xmlns:wpftool="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="MainWindow" Height="452.5" Width="800" Icon="Images/Letter-pen-icon.png">
@@ -23,32 +23,23 @@
         <TabControl x:Name="tbcTabs">
 
             <TabItem Header="Формирование группы рассылки">
-                
                 <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-
                     <ToolBarOverflowPanel Width="Auto" Height="Auto" Margin="0, 5" DockPanel.Dock="Top" HorizontalAlignment="Left">
-
-                        <!-- Выбрать отправителя =============================================================================== -->
+                    <!-- Выбрать отправителя =============================================================================== -->
                         <ToolBar Height="30" Width="502"
                                  x:Name="tbSender">
-
                             <ctrl2:MyToolBar x:Name="m_mtbSenderToolBar" VerticalAlignment="Center" Width="477" Text="Выбрать отправителя:"/>
                         </ToolBar>
-
                         <!-- Перейти в планировщик =============================================================================== -->
                         <ToolBar Height="30" Width="Auto"
                                  x:Name="tbToSchedule">
-                            <ctrl:TabSwitcherControl x:Name="m_tscTabSwitcher" IsHideBtnPrevios="True" IsHideBtnNext="False"/>
+                            <ctrl:TabSwitcherControl x:Name="m_tscTabSwitcher" IsHideBtnPrevios="True"/>
                         </ToolBar>
-                   
-
-
                         <!-- Выбрать SMTP-Server =============================================================================== -->
                         <ToolBar Height="30" Width="502"
                                  x:Name="tbSmtpServer">
                             <ctrl2:MyToolBar x:Name="m_mtbSmtpToolBar" VerticalAlignment="Center" Width="477" Text="Выбрать smtp-server:"/>
                         </ToolBar>
-
                         <!-- Список адресатов =============================================================================== -->
                         <ToolBar Height="30" 
                                  x:Name="tbReceiverList">
@@ -71,13 +62,8 @@
                                 <Label x:Name="IReceiverList" DockPanel.Dock="Left" Height="25" Width="Auto">Список адресатов</Label>
                             </DockPanel>
                         </ToolBar>
-                        
-                        
                     </ToolBarOverflowPanel>
-
-                    <DataGrid x:Name="dgEmails" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-
-                    </DataGrid>
+                    <DataGrid x:Name="dgEmails" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                 </DockPanel>
             </TabItem>
 
