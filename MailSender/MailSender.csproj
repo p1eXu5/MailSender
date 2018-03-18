@@ -38,9 +38,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CodePasswordDLL\bin\Release\CodePasswordDLL.dll</HintPath>
     </Reference>
-    <Reference Include="EmailSendServiceClassDLL">
-      <HintPath>..\EmailSendServiceClassDLL\bin\Release\EmailSendServiceClassDLL.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
@@ -56,9 +53,6 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="WpfControlLibrary1">
-      <HintPath>..\MyToolBarControl\bin\Release\WpfControlLibrary1.dll</HintPath>
-    </Reference>
     <Reference Include="Xceed.Wpf.Toolkit">
       <HintPath>..\..\..\Extended WPF Toolkit Binaries .NET 4.x\Xceed.Wpf.Toolkit.dll</HintPath>
     </Reference>
@@ -136,6 +130,18 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EmailSendServiceClassDLL\EmailSendServiceClassDLL.csproj">
+      <Project>{bfcd3d0e-4e0f-4005-b935-2570e873409c}</Project>
+      <Name>EmailSendServiceClassDLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListViewItemSchedulerControl\ListViewItemSchedulerControl.csproj">
+      <Project>{baeaeab4-2462-46d8-bac8-5d40c766aee5}</Project>
+      <Name>ListViewItemSchedulerControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyToolBarControl\MyToolBarControl.csproj">
+      <Project>{57d7c192-e2e3-4554-8801-493a0ec2e7b6}</Project>
+      <Name>MyToolBarControl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TabSwitcher\TabSwitcher.csproj">
       <Project>{C7C8BEBE-6E7F-43B8-AD43-42A569BEC5E4}</Project>
       <Name>TabSwitcher</Name>

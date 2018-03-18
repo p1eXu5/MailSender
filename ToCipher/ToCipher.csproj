@@ -94,6 +94,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CodePasswordDLL\CodePasswordDLL.csproj">
+      <Project>{b9d262f3-6377-4c90-9122-197252b8bcf6}</Project>
+      <Name>CodePasswordDLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MailSender\MailSender.csproj">
       <Project>{1c3ea18f-80a0-4d15-9aa2-26aebf4ecb9b}</Project>
       <Name>MailSender</Name>
